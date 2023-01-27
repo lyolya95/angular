@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
 import { Listing } from '../types';
 
 @Component({
@@ -19,7 +18,7 @@ export class ListingDataFormComponent implements OnInit {
 
   @Output() onSubmit = new EventEmitter<Listing>();
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {
     this.name = this.currentName;
