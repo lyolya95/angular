@@ -1,0 +1,5 @@
+<div class="content-box" *ngFor="let list of listing">
+  <a routerLink="/listing/{{list.id}}">
+    <h3>{{list.name}} - {{list.price}}</h3>
+  </a>
+</div>

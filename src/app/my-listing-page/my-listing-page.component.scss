@@ -1,0 +1,52 @@
+.content-box {
+  padding: 16px;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 8px var(--dark-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  font-weight: bold;
+
+  &:hover {
+    background-color: var(--dark-gray);
+  }
+}
+
+.edit {
+  color: var(--green);
+  margin-right: 10px;
+}
+
+.delete {
+  color: var(--red);
+}
+
+.create {
+  margin: 10px 0;
+  background-color: var(--green);
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1em;
+
+  &:hover {
+    background-color: var(--hover-green);
+  }
+}
+
+.link-create-btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}

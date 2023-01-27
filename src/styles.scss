@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  // colors
+  --primary-color: #3f51b5;
+  --red: #f44336;
+  --tertiary-color: #ffc107;
+  --text-color: #333;
+  --white: #ffffff;
+  --green: #4CAF50;
+  --hover-green: #3e8e41;
+  --light-gray: #f7f7f7;
+  --dark-gray: #555;
+  --gray: #7e7c7c;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+button {
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
