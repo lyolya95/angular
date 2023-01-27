@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+nav button {
+  background-color: var(--green);
+  color: var(--white);
+}
