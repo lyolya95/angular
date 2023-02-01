@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Listing } from '../types';
 import { fakeListing } from '../fake-data';
+import { ListingsService } from '../listings.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -13,12 +14,20 @@ export class ContactPageComponent implements OnInit {
   message: string = '';
   list!: Listing;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private listingService: ListingsService
+  ) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.list = fakeListing.filter((l) => id === l.id.toString())[0];
-    this.message = `Hi, I'm interested in your ${this.list.name.toLowerCase()}!`;
+    if (!id) return console.log('Not found');
+
+    this.listingService.getListingById(id).subscribe((listing) => {
+      this.list = listing;
+      this.message = `Hi, I'm interested in your ${this.list.name.toLowerCase()}!`;
+    });
   }
 
   sendMessage() {

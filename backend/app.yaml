@@ -1,0 +1,8 @@
+runtime: nodejs14
+beta_settings:
+  cloud_sql_instances: isentropic-keep-376314:us-central1:buy-and-sell-db
+env_variables:
+  DB_USER: admin
+  DB_PASS: abc123!
+  DB_NAME: buy-and-sell
+  DB_SOCKET: /cloudsql/isentropic-keep-376314:us-central1:buy-and-sell-db
